@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+  <style>
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    input[type="number"] {
+      width: 100px;
+      height: 30px;
+      padding: 0 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+   
+    button:hover {
+      background-color: #45a049;
+    }
+    body{
+    	text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Currency Converter</h1>
+  <form id="converter">
+    <label for="amount">Click the Buttons below to convert 100 Pesos to other currencies</label>
+    <input type="number" id="amount" value="100">
+    <button onclick="convertToBaht()">B - Baht</button>
+    <a href="index2.html">
+   
+
+    <button onclick="convertToEuro()">€ - Euro</button>
+    <a href="index3.html" target="_blank">
+  </form>
+  <p id="result"></p>
+
+
+  <script>
+    // Function to convert pesos to Baht
+    function convertToBaht() {
+      const amount = document.getElementById("amount").value;
+      const result = amount * 0.63; 
+      document.getElementById("result").innerHTML = `${amount} pesos = ${result.toFixed(2)} Baht`;
+    }
+
+    // Function to convert pesos to Euro
+    function convertToEuro() {
+      const amount = document.getElementById("amount").value;
+      const result = amount * 0.016; 
+      document.getElementById("result").innerHTML = `${amount} pesos = ${result.toFixed(2)} Euro`;
+    }
+
+  </script>
+</body>
+</html>
+
+
+	
+
+
+
+
+
+
